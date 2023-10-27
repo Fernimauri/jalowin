@@ -19,8 +19,19 @@ class _HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: appMenuItems.length,
-      itemBuilder: (context, index) => Text(appMenuItems[index].title),
+        itemCount: appMenuItems.length, itemBuilder: menuList);
+  }
+
+  Widget menuList(BuildContext context, int index) {
+    final menuItem = appMenuItems[index];
+    return Row(
+      children: [
+        Icon(
+          menuItem.icon,
+          color: Colors.teal,
+        ),
+        Text(menuItem.title)
+      ],
     );
   }
 }
