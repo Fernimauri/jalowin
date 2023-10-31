@@ -24,14 +24,14 @@ class _HomeView extends StatelessWidget {
 
   Widget menuList(BuildContext context, int index) {
     final menuItem = appMenuItems[index];
-    return Row(
-      children: [
-        Icon(
-          menuItem.icon,
-          color: Colors.teal,
-        ),
-        Text(menuItem.title)
-      ],
+    return ListTile(
+      leading: Icon(
+        menuItem.icon,
+        color: Theme.of(context).colorScheme.primary,
+      ),
+      title: Text(menuItem.title),
+      subtitle: Text(menuItem.subTitle),
+      trailing: const Icon(Icons.chevron_right),
     );
   }
 }
