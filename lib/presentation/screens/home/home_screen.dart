@@ -32,6 +32,7 @@ class _HomeView extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       trailing: const Icon(Icons.chevron_right),
+      tileColor: Colors.tealAccent,
     );
   }
 }
