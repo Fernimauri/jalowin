@@ -1,6 +1,6 @@
-import 'package:aplicacion/presentation/screens/buttons/buttons_screen.dart';
-import 'package:aplicacion/presentation/screens/cards/cards_screen.dart';
-import 'package:aplicacion/presentation/screens/home/home_screen.dart';
+import 'package:aplicacion/screens/buttons/buttons_screen.dart';
+import 'package:aplicacion/screens/cards/cards_screen.dart';
+import 'package:aplicacion/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
