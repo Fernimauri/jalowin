@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 const cards = <Map<String, dynamic>>[
-  {'elevation': 0.0, 'label': 'Elevation 0'},
-  {'elevation': 1.0, 'label': 'Elevation 1'},
-  {'elevation': 2.0, 'label': 'Elevation 2'},
-  {'elevation': 3.0, 'label': 'Elevation 3'},
-  {'elevation': 4.0, 'label': 'Elevation 4'},
-  {'elevation': 5.0, 'label': 'Elevation 5'},
+  {'elevation': 0.0, 'label': 'Receta 0'},
+  {'elevation': 1.0, 'label': 'Receta 1'},
+  {'elevation': 2.0, 'label': 'Receta 2'},
+  {'elevation': 3.0, 'label': 'Receta 3'},
+  {'elevation': 4.0, 'label': 'Receta 4'},
+  {'elevation': 5.0, 'label': 'Receta 5'},
 ];
-
 
 class CardsScreen extends StatelessWidget {
   static const String screenName = 'card_screen';
@@ -22,7 +21,30 @@ class CardsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-        children: [
+          children: [
+            Container(
+              height: 56,
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              decoration:
+                  BoxDecoration(color: Color.fromARGB(255, 1, 112, 106)),
+              child: Row(
+                children: [
+                  const IconButton(
+                    icon: Icon(Icons.menu),
+                    tooltip: 'Navigation menu',
+                    onPressed: null, // null disables the button
+                  ),
+                  // Expanded expands its child
+                  // to fill the available space.
+
+                  const IconButton(
+                    icon: Icon(Icons.search),
+                    tooltip: 'Search',
+                    onPressed: null,
+                  ),
+                ],
+              ),
+            ),
             ...cards.map((card) =>
                 _CardType1(label: card['label'], elevation: card['elevation'])),
             ...cards.map((card) =>
@@ -50,18 +72,18 @@ class _CardType1 extends StatelessWidget {
   Widget build(BuildContext context) => Card(
         elevation: elevation,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
+          padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
           child: Column(
             children: [
               Align(
-                  alignment: Alignment.topRight,
+                alignment: Alignment.centerLeft,
+                child: Text(label),
+              ),
+              Align(
+                  alignment: Alignment.centerRight,
                   child: IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.more_vert_outlined))),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(label),
-              )
+                      icon: const Icon(Icons.more_vert_outlined)))
             ],
           ),
         ),
@@ -80,7 +102,7 @@ class _CardType2 extends StatelessWidget {
       elevation: elevation,
       shape: RoundedRectangleBorder(
           side: BorderSide(color: colors.outline),
-          borderRadius: const BorderRadius.all(Radius.circular(15))),
+          borderRadius: const BorderRadius.all(Radius.circular(50))),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
         child: Column(
