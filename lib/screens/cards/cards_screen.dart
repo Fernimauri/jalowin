@@ -1,3 +1,4 @@
+import 'package:aplicacion/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 const cards = <Map<String, dynamic>>[
@@ -9,7 +10,7 @@ const cards = <Map<String, dynamic>>[
   {'elevation': 5.0, 'label': 'Receta 5'},
 ];
 
-class CardsScreen extends StatelessWidget {
+class CardsScreen extends StatelessWidget with AppBarCustom {
   static const String screenName = 'card_screen';
   const CardsScreen({super.key});
 

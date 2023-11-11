@@ -1,26 +1,26 @@
-import 'package:aplicacion/presentation/widgets/custom_button.dart';
+import 'package:aplicacion/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ButtonsScreen extends StatelessWidget {
+class ButtonsScreen extends StatelessWidget with AppBarCustom {
   static const String screenName = 'button_screen';
   const ButtonsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Buttons Screen'),
-        automaticallyImplyLeading:
-            false, // Establece esto en false para ocultar el botón de retorno
-      ),
+      appBar: appBarWithOutReturnButton(title: 'Buttons Screen'),
       body: const _ButtonsView(),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            context.pop();
-          },
-          child: const Icon(Icons.arrow_back_ios_new_rounded)),
+      floatingActionButton: const ButtonReturnPage(),
+      // Establece esto en false para ocultar el botón de retorno
     );
+    //   body: const _ButtonsView(),
+    //   floatingActionButton: FloatingActionButton(
+    //       onPressed: () {
+    //         context.pop();
+    //       },
+    //       child: const Icon(Icons.arrow_back_ios_new_rounded)),
+    // );
   }
 }
 
