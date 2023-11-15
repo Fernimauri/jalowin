@@ -1,4 +1,3 @@
-import 'package:aplicacion/config/widget_bases/widget_bases.dart';
 import 'package:aplicacion/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 

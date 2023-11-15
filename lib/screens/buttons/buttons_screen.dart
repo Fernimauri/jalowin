@@ -1,6 +1,5 @@
 import 'package:aplicacion/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class ButtonsScreen extends StatelessWidget with AppBarCustom {
   static const String screenName = 'button_screen';
