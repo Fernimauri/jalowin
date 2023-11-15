@@ -31,4 +31,25 @@ final List<RouteBase> routes = [
     builder: (BuildContext context, GoRouterState state) =>
         const SnackBarScreen(),
   ),
+  GoRoute(
+    path: '/animated',
+    name: AnimatedScreen.screenName,
+    builder: (BuildContext context, GoRouterState state) =>
+        const AnimatedScreen(),
+  ),
+  GoRoute(
+    path: '/ui-controls',
+    name: UiControlsScreen.screenName,
+    builder: (context, state) => const UiControlsScreen(),
+  ),
+  GoRoute(
+    path: '/tutorial',
+    name: AppTutorialScreen.screenName,
+    builder: (context, state) => const AppTutorialScreen(),
+  ),
+  GoRoute(
+    path: '/infinite',
+    name: InfiniteScrollScreen.screenName,
+    builder: (context, state) => const InfiniteScrollScreen(),
+  ),
 ];
