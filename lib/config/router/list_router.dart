@@ -52,4 +52,9 @@ final List<RouteBase> routes = [
     name: InfiniteScrollScreen.screenName,
     builder: (context, state) => const InfiniteScrollScreen(),
   ),
+  GoRoute(
+    path: '/theme-changer',
+    name: ThemeChangerScreen.screenName,
+    builder: (context, state) => const ThemeChangerScreen(),
+  ),
 ];

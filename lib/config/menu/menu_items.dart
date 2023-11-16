@@ -46,13 +46,12 @@ List<MenuItem> appMenuItems = <MenuItem>[
       link: '/animated',
       icon: Icons.info_outline,
       screenName: 'animated_screen'),
-      const MenuItem(
+  const MenuItem(
       title: 'UI Controls + Tiles',
       subTitle: 'Una serie de controles de Flutter',
       link: '/ui-controls',
       icon: Icons.car_rental_outlined,
       screenName: 'ui_controls_screen'),
-      
   const MenuItem(
       title: 'Introducción a la aplicación',
       subTitle: 'Pequeño tutorial introductorio',
@@ -65,4 +64,11 @@ List<MenuItem> appMenuItems = <MenuItem>[
       link: '/infinite',
       icon: Icons.list_alt_rounded,
       screenName: 'infinite_screen'),
+  const MenuItem(
+    title: 'Cambiar tema',
+    subTitle: 'Cambiar tema de la aplicación',
+    link: '/theme-changer',
+    icon: Icons.color_lens_outlined,
+    screenName: 'theme_changer_screen',
+  )
 ];
