@@ -1,4 +1,5 @@
 import 'package:aplicacion/config/menu/menu_items.dart';
+import 'package:aplicacion/presentation/widgets/slideMenu/slide_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,13 +9,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menu de Materia 3'),
-      ),
-      body: ListView.builder(
-          itemCount: appMenuItems.length, itemBuilder: menuList),
-    );
+        appBar: AppBar(
+          title: const Text('Menu de Materia 3'),
+        ),
+        body: ListView.builder(
+            itemCount: appMenuItems.length, itemBuilder: menuList),
+        drawer: SideMenu(scaffoldKey: scaffoldKey));
   }
 
   Widget menuList(BuildContext context, int index) {
